@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 1, 2017 3:45:44 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="democrud.model.Systemuser" table="SYSTEMUSER" catalog="sql12166854" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="maNhanVien" type="int">
+            <column name="MaNhanVien" not-null="true" />
+        </property>
+        <property name="ho" type="string">
+            <column name="Ho" length="32" not-null="true" />
+        </property>
+        <property name="ten" type="string">
+            <column name="Ten" length="64" not-null="true" />
+        </property>
+        <property name="matKhau" type="string">
+            <column name="MatKhau" length="256" />
+        </property>
+        <property name="gioiTinh" type="int">
+            <column name="GioiTinh" not-null="true" />
+        </property>
+        <property name="ngaySinh" type="date">
+            <column name="NgaySinh" length="10" not-null="true" />
+        </property>
+        <property name="noiSinh" type="string">
+            <column name="NoiSinh" length="125" not-null="true" />
+        </property>
+        <property name="diaChiThuongTru" type="string">
+            <column name="DiaChiThuongTru" length="125" />
+        </property>
+        <property name="diaChiTamTru" type="string">
+            <column name="DiaChiTamTru" length="128" />
+        </property>
+        <property name="hinhAnh" type="string">
+            <column name="HinhAnh" length="128" />
+        </property>
+        <set name="userdiplomas" table="USERDIPLOMA" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserId" not-null="true" />
+            </key>
+            <one-to-many class="democrud.model.Userdiploma" />
+        </set>
+    </class>
+</hibernate-mapping>
