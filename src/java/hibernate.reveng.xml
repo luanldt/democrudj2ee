@@ -40,7 +40,11 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-reverse-engineering>
-  <schema-selection match-catalog="sql12166854"/>
-  <table-filter match-name="SYSTEMUSER"/>
+  <schema-selection match-catalog="HERP" match-schema="dbo"/>
+  <type-mapping>
+      <sql-type jdbc-type="NVARCHAR" hibernate-type="java.lang.String" />
+      <sql-type jdbc-type="VARCHAR" hibernate-type="java.lang.String" />
+  </type-mapping>
   <table-filter match-name="USERDIPLOMA"/>
+  <table-filter match-name="SYSTEMUSER"/>
 </hibernate-reverse-engineering>

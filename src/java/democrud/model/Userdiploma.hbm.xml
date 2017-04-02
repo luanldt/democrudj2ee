@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 1, 2017 3:45:44 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Apr 1, 2017 3:11:16 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="democrud.model.Userdiploma" table="USERDIPLOMA" catalog="sql12166854" optimistic-lock="version">
-        <id name="id" type="java.lang.Integer">
+    <class name="democrud.model.Userdiploma" table="USERDIPLOMA" schema="dbo" catalog="HERP" optimistic-lock="version">
+        <id name="id" type="int">
             <column name="Id" />
-            <generator class="identity" />
+            <generator class="native" />
         </id>
         <many-to-one name="systemuser" class="democrud.model.Systemuser" fetch="select">
-            <column name="UserId" not-null="true" />
+            <column name="UserId" />
         </many-to-one>
-        <property name="tenBangCap" type="string">
-            <column name="TenBangCap" length="50" not-null="true" />
-        </property>
-        <property name="noiCap" type="string">
-            <column name="NoiCap" length="100" not-null="true" />
+        <property name="tenBangCap" type="java.lang.String">
+            <column name="TenBangCap" length="50" />
         </property>
         <property name="ngayCap" type="date">
-            <column name="NgayCap" length="10" not-null="true" />
+            <column name="NgayCap" length="10" />
+        </property>
+        <property name="noiCap" type="java.lang.String">
+            <column name="NoiCap" length="50" />
         </property>
     </class>
 </hibernate-mapping>

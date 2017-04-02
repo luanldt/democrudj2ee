@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>CRUD</servlet-name>
+        <servlet-class>democrud.controller.CRUD</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProcessData</servlet-name>
+        <servlet-class>democrud.controller.ProcessData</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProcessUpdate</servlet-name>
+        <servlet-class>democrud.controller.ProcessUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CRUD</servlet-name>
+        <url-pattern>/CRUD</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcessData</servlet-name>
+        <url-pattern>/ProcessData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcessUpdate</servlet-name>
+        <url-pattern>/ProcessUpdate</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

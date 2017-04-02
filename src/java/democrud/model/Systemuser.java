@@ -1,5 +1,5 @@
 package democrud.model;
-// Generated Apr 1, 2017 3:45:43 PM by Hibernate Tools 4.3.1
+// Generated Apr 1, 2017 3:11:16 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -12,32 +12,28 @@ import java.util.Set;
 public class Systemuser  implements java.io.Serializable {
 
 
-     private Integer id;
-     private int maNhanVien;
+     private int id;
+     private String maNhanVien;
      private String ho;
      private String ten;
      private String matKhau;
-     private int gioiTinh;
+     private Integer gioiTinh;
      private Date ngaySinh;
      private String noiSinh;
      private String diaChiThuongTru;
      private String diaChiTamTru;
      private String hinhAnh;
-     private Set userdiplomas = new HashSet(0);
+     private Set<Userdiploma> userdiplomas = new HashSet(0);
 
     public Systemuser() {
     }
 
 	
-    public Systemuser(int maNhanVien, String ho, String ten, int gioiTinh, Date ngaySinh, String noiSinh) {
-        this.maNhanVien = maNhanVien;
-        this.ho = ho;
-        this.ten = ten;
-        this.gioiTinh = gioiTinh;
-        this.ngaySinh = ngaySinh;
-        this.noiSinh = noiSinh;
+    public Systemuser(int id) {
+        this.id = id;
     }
-    public Systemuser(int maNhanVien, String ho, String ten, String matKhau, int gioiTinh, Date ngaySinh, String noiSinh, String diaChiThuongTru, String diaChiTamTru, String hinhAnh, Set userdiplomas) {
+    public Systemuser(int id, String maNhanVien, String ho, String ten, String matKhau, Integer gioiTinh, Date ngaySinh, String noiSinh, String diaChiThuongTru, String diaChiTamTru, String hinhAnh, Set userdiplomas) {
+       this.id = id;
        this.maNhanVien = maNhanVien;
        this.ho = ho;
        this.ten = ten;
@@ -51,18 +47,18 @@ public class Systemuser  implements java.io.Serializable {
        this.userdiplomas = userdiplomas;
     }
    
-    public Integer getId() {
+    public int getId() {
         return this.id;
     }
     
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
-    public int getMaNhanVien() {
+    public String getMaNhanVien() {
         return this.maNhanVien;
     }
     
-    public void setMaNhanVien(int maNhanVien) {
+    public void setMaNhanVien(String maNhanVien) {
         this.maNhanVien = maNhanVien;
     }
     public String getHo() {
@@ -86,11 +82,11 @@ public class Systemuser  implements java.io.Serializable {
     public void setMatKhau(String matKhau) {
         this.matKhau = matKhau;
     }
-    public int getGioiTinh() {
+    public Integer getGioiTinh() {
         return this.gioiTinh;
     }
     
-    public void setGioiTinh(int gioiTinh) {
+    public void setGioiTinh(Integer gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
     public Date getNgaySinh() {
@@ -128,11 +124,11 @@ public class Systemuser  implements java.io.Serializable {
     public void setHinhAnh(String hinhAnh) {
         this.hinhAnh = hinhAnh;
     }
-    public Set getUserdiplomas() {
+    public Set<Userdiploma> getUserdiplomas() {
         return this.userdiplomas;
     }
     
-    public void setUserdiplomas(Set userdiplomas) {
+    public void setUserdiplomas(Set<Userdiploma> userdiplomas) {
         this.userdiplomas = userdiplomas;
     }
 

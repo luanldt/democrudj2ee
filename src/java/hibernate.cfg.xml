@@ -41,11 +41,12 @@ Contributor(s):
 -->
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://sql12.freesqldatabase.com:3306/sql12166854?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">sql12166854</property>
-    <property name="hibernate.connection.password">JIwsYchJIU</property>
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://minhluan-pc:1433;databaseName=HERP</property>
+    <property name="hibernate.connection.username">sa</property>
+    <property name="hibernate.connection.password">123456789</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+    <property name="hibernate.show_sql">true</property>
     <mapping resource="democrud/model/Systemuser.hbm.xml"/>
     <mapping resource="democrud/model/Userdiploma.hbm.xml"/>
   </session-factory>

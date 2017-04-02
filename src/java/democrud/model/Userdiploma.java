@@ -1,5 +1,5 @@
 package democrud.model;
-// Generated Apr 1, 2017 3:45:43 PM by Hibernate Tools 4.3.1
+// Generated Apr 1, 2017 3:11:16 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,27 +10,32 @@ import java.util.Date;
 public class Userdiploma  implements java.io.Serializable {
 
 
-     private Integer id;
+     private int id;
      private Systemuser systemuser;
      private String tenBangCap;
-     private String noiCap;
      private Date ngayCap;
+     private String noiCap;
 
     public Userdiploma() {
     }
 
-    public Userdiploma(Systemuser systemuser, String tenBangCap, String noiCap, Date ngayCap) {
+	
+    public Userdiploma(int id) {
+        this.id = id;
+    }
+    public Userdiploma(int id, Systemuser systemuser, String tenBangCap, Date ngayCap, String noiCap) {
+       this.id = id;
        this.systemuser = systemuser;
        this.tenBangCap = tenBangCap;
-       this.noiCap = noiCap;
        this.ngayCap = ngayCap;
+       this.noiCap = noiCap;
     }
    
-    public Integer getId() {
+    public int getId() {
         return this.id;
     }
     
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
     public Systemuser getSystemuser() {
@@ -47,19 +52,19 @@ public class Userdiploma  implements java.io.Serializable {
     public void setTenBangCap(String tenBangCap) {
         this.tenBangCap = tenBangCap;
     }
-    public String getNoiCap() {
-        return this.noiCap;
-    }
-    
-    public void setNoiCap(String noiCap) {
-        this.noiCap = noiCap;
-    }
     public Date getNgayCap() {
         return this.ngayCap;
     }
     
     public void setNgayCap(Date ngayCap) {
         this.ngayCap = ngayCap;
+    }
+    public String getNoiCap() {
+        return this.noiCap;
+    }
+    
+    public void setNoiCap(String noiCap) {
+        this.noiCap = noiCap;
     }
 
 
